@@ -1,6 +1,9 @@
 # Find-a-song
 This is a project to find songs from just a link. if you ever like a song but dont know the name/artist you can just paste the link here, it will give the detail you want. i used ombed system which dont need any API to work. thats fully opensource. 
 
+# Limitation
+Its mainly made for youtube and sometimes get error while finding others
+
 # Ai-Declaration
 Some frontend parts are asked by AI, i used them to look it amazing. but it was just for learning and don't just copy-paste.
 
