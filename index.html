@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find a song!</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="site-header__brand">
+      <img src="logo.png" alt="Logo" class="site-header__logo" />
+      <span>Find a song!</span>
+    </div>
+  </header>
+
+  <main class="page-center">
+    <div class="search-card">
+      <h1 class="search-card__heading">Identify Any Song</h1>
+      <p class="search-card__sub">Paste a URL or type a song title to identify it</p>
+
+      <div class="search-card__note">
+        Works with YouTube, TikTok, SoundCloud &amp; Vimeo. For Instagram / Facebook — paste the song name directly.
+      </div>
+
+      <form id="recognize-form" class="search-form">
+        <input type="text" id="url-input" class="search-form__input"
+          placeholder="Paste video/audio URL or song title..." autocomplete="off" required />
+        <button type="submit" class="btn btn--primary" id="submit-btn">Identify</button>
+      </form>
+    </div>
+  </main>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="progress-modal" class="modal hidden">
+    <div class="loading-box">
+      <div class="loading-spinner"></div>
+      <h3>Loading...</h3>
+      <p id="loading-status" class="loading-status">Fetching media info...</p>
+    </div>
+  </div>
+
+  <div id="result-modal" class="modal hidden"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
