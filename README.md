@@ -8,6 +8,7 @@ live preview: https://tanzil-alam.github.io/Find-a-song/
 
 <img width="1920" height="1080" alt="Screenshot (835)" src="https://github.com/user-attachments/assets/7088dc2d-6fcc-4233-bfa2-ca8b4b1fbeb4" />
 
-![Uploading image.png…]()
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/50c2ba03-a01a-4079-8317-caf8945077be" />
+
 
 
