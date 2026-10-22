@@ -22,8 +22,8 @@ a {
     display: flex;
     align-items: center;
     padding: 0.85rem 1.5rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid #e5e7eb;
+    background: rgba(232, 229, 229, 0.598);
+    border-bottom: 1px solid #cedaf2d4;
 }
 
 .site-header__brand {
@@ -52,7 +52,7 @@ a {
     width: min(500px, 100%);
     padding: 2rem 1.75rem;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(232, 227, 227, 0.721);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
@@ -63,7 +63,7 @@ a {
 }
 
 .search-card__sub {
-    color: #666;
+    color: #666666d3;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
@@ -84,7 +84,7 @@ a {
 .search-form__input {
     width: 100%;
     padding: 0.75rem 0.9rem;
-    border: 1px solid #ccc;
+    border: 1px solid #e1dbdbd1;
     border-radius: 6px;
     font-size: 0.95rem;
     outline: none;
