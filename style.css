@@ -22,7 +22,7 @@ a {
     display: flex;
     align-items: center;
     padding: 0.85rem 1.5rem;
-    background: rgba(232, 229, 229, 0.598);
+    background: rgba(242, 142, 142, 0.598);
     border-bottom: 1px solid #cedaf2d4;
 }
 
@@ -49,12 +49,13 @@ a {
 }
 
 .search-card {
-    width: min(500px, 100%);
+    width: min(1000px, 100%);
     padding: 2rem 1.75rem;
     border-radius: 12px;
-    background: rgba(232, 227, 227, 0.721);
+    background: rgba(191, 119, 119, 0.721);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
+    height: 400px;
 }
 
 .search-card__heading {
@@ -63,13 +64,13 @@ a {
 }
 
 .search-card__sub {
-    color: #666666d3;
+    color: #000000d3;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
 .search-card__note {
-    color: #777;
+    color: #000000;
     font-size: 0.85rem;
     line-height: 1.4;
     margin-bottom: 1.25rem;
@@ -206,6 +207,23 @@ a {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 0.85rem;
+}
+
+.result-card__player {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.85rem;
+}
+
+audio.result-card__player {
+    height: 48px;
+    border: 0;
+}
+
+.result-card__preview-note {
+    margin-bottom: 0.85rem;
+    color: #666;
+    font-size: 0.9rem;
 }
 
 .result-card__title {
