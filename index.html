@@ -11,6 +11,13 @@
 
 <body>
 
+  <div id="rating-popup"
+    style="position: fixed; bottom: 20px; right: 20px; background: #ffffff; color: #333333; padding: 15px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 15px; font-family: sans-serif; z-index: 9999; border: 1px solid #eee;">
+    <span>Please Rate me something good, i worked so hard 😭</span>
+    <button onclick="document.getElementById('rating-popup').remove()"
+      style="background: none; border: none; font-size: 18px; cursor: pointer; color: #888888; line-height: 1;">&times;</button>
+  </div>
+
   <header class="site-header">
     <div class="site-header__brand">
       <img src="logo.png" alt="Logo" class="site-header__logo" />
@@ -24,12 +31,12 @@
       <p class="search-card__sub">Paste a URL or type a song title to identify it</p>
 
       <div class="search-card__note">
-        Works with YouTube, TikTok, SoundCloud &amp; Vimeo. For Instagram / Facebook — paste the song name directly.
+        Works with YouTube, SoundCloud
       </div>
-
       <form id="recognize-form" class="search-form">
         <input type="text" id="url-input" class="search-form__input"
           placeholder="Paste video/audio URL or song title..." autocomplete="off" required />
+        <br>
         <button type="submit" class="btn btn--primary" id="submit-btn">Identify</button>
       </form>
     </div>
@@ -50,4 +57,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
