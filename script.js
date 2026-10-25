@@ -34,6 +34,11 @@
     }
 
     function closeResult() {
+        const player = resultModal.querySelector('audio');
+        if (player) {
+            player.pause();
+            player.currentTime = 0;
+        }
         resultModal.classList.add('hidden');
         hideOverlay();
     }
@@ -219,13 +224,16 @@
                 artist: track.artistName || 'Unknown Artist',
                 album: track.collectionName || 'Single',
                 cover,
+                previewUrl: track.previewUrl || '',
             };
         }
 
         const openPlatforms = ['YouTube', 'TikTok', 'SoundCloud', 'Vimeo', 'Search'];
         if (openPlatforms.includes(platform) && !looksLikeShortcode(cleaned)) {
             const cover = await preloadImage(thumb) || '';
-            return { title: cleaned || rawTitle, artist: author || platform, album: platform + ' Track', cover };
+            const title = cleaned || rawTitle;
+            const artist = author || platform;
+            return { title, artist, album: platform + ' Track', cover, previewUrl: '' };
         }
 
         throw new Error('Song not found in catalog. Try typing the song title directly.');
@@ -246,16 +254,30 @@
             input.value = '';
 
             const enc = s => encodeURIComponent(s);
+            let previewUrl = '';
+            try {
+                const parsedPreviewUrl = new URL(song.previewUrl);
+                if (parsedPreviewUrl.protocol === 'https:') previewUrl = parsedPreviewUrl.href;
+            } catch (_) { }
+            previewUrl = previewUrl.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+            let coverUrl = 'no-cover.png';
+            try {
+                const parsedCoverUrl = new URL(song.cover);
+                if (parsedCoverUrl.protocol === 'https:') coverUrl = parsedCoverUrl.href;
+            } catch (_) { }
+            coverUrl = coverUrl.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+            const cover = `<img class="result-card__cover" src="${coverUrl}" alt="Album cover" onerror="this.src='no-cover.png'">`;
+            const player = previewUrl
+                ? `<audio class="result-card__player" controls autoplay preload="none" src="${previewUrl}">Your browser does not support audio playback.</audio>`
+                : '<p class="result-card__preview-note">A playable preview is not available for this song.</p>';
             openResult(`
         <div class="modal__head">
           <span>Song Found!</span>
           <button class="modal__close" onclick="window._closeResult()">&times;</button>
         </div>
         <div class="result-card">
-          <img class="result-card__cover"
-               src="${song.cover || 'no-cover.png'}"
-               onerror="this.src='no-cover.png'"
-               alt="Cover art">
+          ${cover}
+          ${player}
           <p class="result-card__title">${song.title}</p>
           <p class="result-card__artist">${song.artist}</p>
           <p class="result-card__album">${song.album}</p>
@@ -286,6 +308,7 @@
         } finally {
             submitBtn.disabled = false;
         }
+
     });
 
 })();
