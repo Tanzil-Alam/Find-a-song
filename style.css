@@ -22,8 +22,8 @@ a {
     display: flex;
     align-items: center;
     padding: 0.85rem 1.5rem;
-    background: rgba(242, 142, 142, 0.598);
-    border-bottom: 1px solid #cedaf2d4;
+    background: rgba(255, 192, 192, 0.703);
+    border-bottom: 1px solid #bccbe7d4;
 }
 
 .site-header__brand {
@@ -188,7 +188,7 @@ a {
     border: none;
     font-size: 1.3rem;
     line-height: 1;
-    color: #888;
+    color: #888888ba;
     cursor: pointer;
 }
 
@@ -222,7 +222,7 @@ audio.result-card__player {
 
 .result-card__preview-note {
     margin-bottom: 0.85rem;
-    color: #666;
+    color: #666666d1;
     font-size: 0.9rem;
 }
 
@@ -241,7 +241,7 @@ audio.result-card__player {
 .result-card__album {
     font-size: 0.8rem;
     font-style: italic;
-    color: #888;
+    color: #ef6a6aee;
 }
 
 .result-card__links {
@@ -254,17 +254,17 @@ audio.result-card__player {
 .stream-btn {
     padding: 0.45rem 0.85rem;
     border-radius: 4px;
-    color: #fff;
+    color: #e4c9c9eb;
     font-size: 0.82rem;
     font-weight: 600;
 }
 
 .stream-btn--spotify {
-    background: #1db954;
+    background: rgba(33, 197, 90, 0.902)
 }
 
 .stream-btn--apple {
-    background: #fc3c44;
+    background: #ef5c61ea;
 }
 
 .error-card {
@@ -274,7 +274,7 @@ audio.result-card__player {
 
 .error-card__msg {
     font-size: 0.95rem;
-    color: #d32f2f;
+    color: #e34b4bdc;
 }
 
 .hidden {

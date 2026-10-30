@@ -301,8 +301,8 @@
           <button class="modal__close" onclick="window._closeResult()">&times;</button>
         </div>
         <div class="error-card">
-          <p class="error-card__msg">${err.message || 'Something went wrong.'}</p>
-          <button class="btn btn--ghost" onclick="window._closeResult()">Try Again</button>
+          <p class="error-card__msg">${err.message || 'something went wrong.'}</p>
+          <button class="btn btn--ghost" onclick="window._closeresult()">Try Again</button>
         </div>
       `);
         } finally {
